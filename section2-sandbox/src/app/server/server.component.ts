@@ -10,13 +10,19 @@ export class ServerComponent implements OnInit {
   serverId: number = 123;
 
   // tslint:disable-next-line:no-inferrable-types
-  private serverStatus: string = 'up';
+  private serverStatus: string;
 
   public getServerStatus(): string {
     return this.serverStatus;
   }
 
-  constructor() { }
+  getColor() {
+    return this.getServerStatus() === 'online' ? 'green' : 'red';
+  }
+
+  constructor() {
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+  }
 
   ngOnInit() {
   }
