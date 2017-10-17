@@ -10,13 +10,10 @@ export class UserDetailComponent implements OnInit {
   index: number;
   createdDate;
 
-   constructor() {
-     this.createdDate = new Date();
-
-    //UserDetailComponent.count++;
+  constructor() {
+    this.createdDate = new Date();
     this.index = UserDetailComponent.count;
-    // console.log('UserDetailComponent.count');
-   }
+  }
 
   ngOnInit() {
   }
