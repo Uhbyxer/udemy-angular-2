@@ -1,0 +1,12 @@
+
+<button (click) = "onButtonClick()" >Show/hide details</button>
+<p [hidden] = "hidden">
+  user-details works!
+</p>
+<p *ngIf="!hidden; else noDetails">
+    user-details using ngIf
+</p>
+<ng-template #noDetails><p> No details yet</p></ng-template>  
+
+<app-user-detail *ngFor = "let detail of details"></app-user-detail>
+
